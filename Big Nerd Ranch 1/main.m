@@ -8,10 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
-int main(int argc, const char * argv[]) {
+int main (int argc, const char * argv[])
+{
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        
+        NSHost *myComputer = [NSHost currentHost]; //this is the instance of NSHost
+        NSString *localName = [myComputer localizedName]; //this runs the method localizedName on the receiver myComputer
+        NSLog (@"MY computer name is %@", localName);
+        
+        
     }
     return 0;
 }
